@@ -1,0 +1,79 @@
+{
+  "input": {
+    "workflow": {
+      "1": {
+        "inputs": {
+          "value": 2325341054,
+          "image": [
+            "2",
+            0
+          ],
+          "dit": [
+            "3",
+            0
+          ],
+          "vae": [
+            "4",
+            0
+          ]
+        },
+        "class_type": "SeedVR2VideoUpscaler",
+        "_meta": {
+          "title": "SeedVR2VideoUpscaler"
+        }
+      },
+      "2": {
+        "inputs": {
+          "image": "2026-02-08-185149__0.jpg"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+          "title": "LoadImage"
+        }
+      },
+      "3": {
+        "inputs": {
+          "filename": "seedvr2_ema_7b_fp16.safetensors"
+        },
+        "class_type": "SeedVR2LoadDiTModel",
+        "_meta": {
+          "title": "SeedVR2LoadDiTModel"
+        }
+      },
+      "4": {
+        "inputs": {
+          "filename": "ema_vae_fp16.safetensors"
+        },
+        "class_type": "SeedVR2LoadVAEModel",
+        "_meta": {
+          "title": "SeedVR2LoadVAEModel"
+        }
+      },
+      "18": {
+        "inputs": {
+          "images": [
+            "19",
+            0
+          ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+          "title": "PreviewImage"
+        }
+      },
+      "19": {
+        "inputs": {
+          "text": "[time(%Y-%m-%d)]",
+          "images": [
+            "1",
+            0
+          ]
+        },
+        "class_type": "Image Save",
+        "_meta": {
+          "title": "Image Save"
+        }
+      }
+    }
+  }
+}
